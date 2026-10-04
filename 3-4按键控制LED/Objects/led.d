@@ -28,3 +28,4 @@
 .\objects\led.o: .\Libary\stm32f10x_usart.h
 .\objects\led.o: .\Libary\stm32f10x_wwdg.h
 .\objects\led.o: .\Libary\misc.h
+.\objects\led.o: Hardware\KEY.h
