@@ -907,7 +907,7 @@ Image Symbol Table
     i.SystemInit                             0x08000790   Section        0  system_stm32f10x_1.o(i.SystemInit)
     i.UsageFault_Handler                     0x080007f0   Section        0  stm32f10x_it.o(i.UsageFault_Handler)
     i.main                                   0x080007f4   Section        0  main.o(i.main)
-    .constdata                               0x08000828   Section     1520  oled.o(.constdata)
+    .constdata                               0x0800084c   Section     1520  oled.o(.constdata)
     .bss                                     0x20000000   Section       96  libspace.o(.bss)
     HEAP                                     0x20000060   Section      512  startup_stm32f10x_md_1.o(HEAP)
     Heap_Mem                                 0x20000060   Data         512  startup_stm32f10x_md_1.o(HEAP)
@@ -1084,10 +1084,10 @@ Image Symbol Table
     SysTick_Handler                          0x0800078d   Thumb Code     2  stm32f10x_it.o(i.SysTick_Handler)
     SystemInit                               0x08000791   Thumb Code    78  system_stm32f10x_1.o(i.SystemInit)
     UsageFault_Handler                       0x080007f1   Thumb Code     4  stm32f10x_it.o(i.UsageFault_Handler)
-    main                                     0x080007f5   Thumb Code    36  main.o(i.main)
-    OLED_F8x16                               0x08000828   Data        1520  oled.o(.constdata)
-    Region$$Table$$Base                      0x08000e18   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08000e28   Number         0  anon$$obj.o(Region$$Table)
+    main                                     0x080007f5   Thumb Code    56  main.o(i.main)
+    OLED_F8x16                               0x0800084c   Data        1520  oled.o(.constdata)
+    Region$$Table$$Base                      0x08000e3c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000e4c   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x20000000   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000060   Data           0  libspace.o(.bss)
 
@@ -1099,9 +1099,9 @@ Memory Map of the image
 
   Image Entry point : 0x0800016d
 
-  Load Region LR_1 (Base: 0x08000000, Size: 0x00000e28, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x08000000, Size: 0x00000e4c, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000e28, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000e4c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1193,17 +1193,17 @@ Memory Map of the image
     0x0800078e   0x0800078e   0x00000002   PAD
     0x08000790   0x08000790   0x00000060   Code   RO           27    i.SystemInit        system_stm32f10x_1.o
     0x080007f0   0x080007f0   0x00000004   Code   RO          186    i.UsageFault_Handler  stm32f10x_it.o
-    0x080007f4   0x080007f4   0x00000034   Code   RO          137    i.main              main.o
-    0x08000828   0x08000828   0x000005f0   Data   RO         3386    .constdata          oled.o
-    0x08000e18   0x08000e18   0x00000010   Data   RO         3639    Region$$Table       anon$$obj.o
+    0x080007f4   0x080007f4   0x00000058   Code   RO          137    i.main              main.o
+    0x0800084c   0x0800084c   0x000005f0   Data   RO         3386    .constdata          oled.o
+    0x08000e3c   0x08000e3c   0x00000010   Data   RO         3639    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000e28, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000e4c, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x08000e28, Size: 0x00000660, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x08000e4c, Size: 0x00000660, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1221,7 +1221,7 @@ Image component sizes
 
          0          0          0          0          0       4500   core_cm3_1.o
         70          0          0          0          0        922   delay.o
-        52         16          0          0          0     201571   main.o
+        88         32          0          0          0     201579   main.o
        734         22       1520          0          0       6359   oled.o
         64         26        236          0       1536        820   startup_stm32f10x_md_1.o
        288          0          0          0          0      10852   stm32f10x_gpio.o
@@ -1230,7 +1230,7 @@ Image component sizes
        328         28          0          0          0      10277   system_stm32f10x_1.o
 
     ----------------------------------------------------------------------
-      1602         98       1772          0       1536     239552   Object Totals
+      1638        114       1772          0       1536     239560   Object Totals
          0          0         16          0          0          0   (incl. Generated)
          8          0          0          0          0          0   (incl. Padding)
 
@@ -1278,15 +1278,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1852        114       1772          0       1632     238556   Grand Totals
-      1852        114       1772          0       1632     238556   ELF Image Totals
-      1852        114       1772          0          0          0   ROM Totals
+      1888        130       1772          0       1632     238564   Grand Totals
+      1888        130       1772          0       1632     238564   ELF Image Totals
+      1888        130       1772          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 3624 (   3.54kB)
+    Total RO  Size (Code + RO Data)                 3660 (   3.57kB)
     Total RW  Size (RW Data + ZI Data)              1632 (   1.59kB)
-    Total ROM Size (Code + RO Data + RW Data)       3624 (   3.54kB)
+    Total ROM Size (Code + RO Data + RW Data)       3660 (   3.57kB)
 
 ==============================================================================
 

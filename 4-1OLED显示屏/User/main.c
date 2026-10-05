@@ -9,7 +9,8 @@ int main(void)
 
     OLED_ShowString(1, 1, "HELLO");
     OLED_ShowString(2, 1, "STM32");
-
+    OLED_ShowString(3, 1, "LOVE");
+    OLED_ShowString(4, 1, "ROBIN");
     while (1)
     {
     }
