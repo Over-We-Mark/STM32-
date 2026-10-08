@@ -1,0 +1,47 @@
+[33mcommit 46e3bcd243ea47a12457f28f9ba6816fdde820cf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Mark Weee <wmkaptx_4869@outlook.com>
+Date:   Thu Oct 8 19:15:27 2026 +0800
+
+    创建5-3，完成5-2
+
+[33mcommit ea0ee5c43cb34d6d2bf23ab9d43bb007112e1f9d[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Mark Weee <wmkaptx_4869@outlook.com>
+Date:   Thu Oct 8 14:13:06 2026 +0800
+
+    创建5-2
+
+[33mcommit 9daec5c41cba1bbbec890e140293c0ff4d5d5f28[m
+Author: Mark Weee <wmkaptx_4869@outlook.com>
+Date:   Thu Oct 8 11:11:53 2026 +0800
+
+    5-1完全体
+
+[33mcommit 784f47a63cccf9ed03081746d40a459833236a34[m
+Author: Mark Weee <wmkaptx_4869@outlook.com>
+Date:   Thu Oct 8 11:03:29 2026 +0800
+
+    5-1对射式红外传感器计次
+
+[33mcommit 13a4f0d89b1b8b42193ecfb2ab7ea9551fc7db4f[m
+Author: Mark Weee <wmkaptx_4869@outlook.com>
+Date:   Mon Oct 5 12:23:22 2026 +0800
+
+    OLED显示屏调试完毕
+
+[33mcommit 5186ee3133a97b5cf3344d4c0e52a7158f8402f1[m
+Author: Mark Weee <wmkaptx_4869@outlook.com>
+Date:   Sun Oct 4 17:02:15 2026 +0800
+
+    按键控制完毕，oled显示屏
+
+[33mcommit 747356c4165d7946a7f2c4b4eb583d3068895015[m
+Author: Mark Weee <wmkaptx_4869@outlook.com>
+Date:   Sun Oct 4 08:46:20 2026 +0800
+
+    学习了按键点击亮灯的功能
+
+[33mcommit 28a52fc18f829e3ebafa7881b49515df4d3fe210[m
+Author: Mark Weee <wmkaptx_4869@outlook.com>
+Date:   Fri Oct 2 16:04:14 2026 +0800
+
+    stm32学习文件
