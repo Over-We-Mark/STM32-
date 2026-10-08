@@ -143,12 +143,12 @@ Section Cross References
     centersensor.o(i.CenterSensor_init) refers to stm32f10x_rcc.o(i.RCC_APB2PeriphClockCmd) for RCC_APB2PeriphClockCmd
     centersensor.o(i.CenterSensor_init) refers to stm32f10x_gpio.o(i.GPIO_Init) for GPIO_Init
     centersensor.o(i.CenterSensor_init) refers to stm32f10x_gpio.o(i.GPIO_EXTILineConfig) for GPIO_EXTILineConfig
-    centersensor.o(i.CenterSensor_init) refers to delay.o(i.Delay_ms) for Delay_ms
     centersensor.o(i.CenterSensor_init) refers to stm32f10x_exti.o(i.EXTI_Init) for EXTI_Init
     centersensor.o(i.CenterSensor_init) refers to misc.o(i.NVIC_PriorityGroupConfig) for NVIC_PriorityGroupConfig
     centersensor.o(i.CenterSensor_init) refers to misc.o(i.NVIC_Init) for NVIC_Init
     centersensor.o(i.ConterSen) refers to centersensor.o(.data) for Conter_Count
     centersensor.o(i.EXTI15_10_IRQHandler) refers to stm32f10x_exti.o(i.EXTI_GetITStatus) for EXTI_GetITStatus
+    centersensor.o(i.EXTI15_10_IRQHandler) refers to delay.o(i.Delay_ms) for Delay_ms
     centersensor.o(i.EXTI15_10_IRQHandler) refers to stm32f10x_exti.o(i.EXTI_ClearITPendingBit) for EXTI_ClearITPendingBit
     centersensor.o(i.EXTI15_10_IRQHandler) refers to centersensor.o(.data) for Conter_Count
     __main.o(!!!main) refers to __rtentry.o(.ARM.Collect$$rtentry$$00000000) for __rt_entry
@@ -887,11 +887,11 @@ Image Symbol Table
     .text                                    0x08000242   Section        0  indicate_semi.o(.text)
     i.BusFault_Handler                       0x08000242   Section        0  stm32f10x_it.o(i.BusFault_Handler)
     i.CenterSensor_init                      0x08000248   Section        0  centersensor.o(i.CenterSensor_init)
-    i.ConterSen                              0x080002cc   Section        0  centersensor.o(i.ConterSen)
-    i.DebugMon_Handler                       0x080002d8   Section        0  stm32f10x_it.o(i.DebugMon_Handler)
-    i.Delay_ms                               0x080002da   Section        0  delay.o(i.Delay_ms)
-    i.Delay_us                               0x080002f2   Section        0  delay.o(i.Delay_us)
-    i.EXTI15_10_IRQHandler                   0x08000320   Section        0  centersensor.o(i.EXTI15_10_IRQHandler)
+    i.ConterSen                              0x080002c8   Section        0  centersensor.o(i.ConterSen)
+    i.DebugMon_Handler                       0x080002d4   Section        0  stm32f10x_it.o(i.DebugMon_Handler)
+    i.Delay_ms                               0x080002d6   Section        0  delay.o(i.Delay_ms)
+    i.Delay_us                               0x080002ee   Section        0  delay.o(i.Delay_us)
+    i.EXTI15_10_IRQHandler                   0x0800031c   Section        0  centersensor.o(i.EXTI15_10_IRQHandler)
     i.EXTI_ClearITPendingBit                 0x08000348   Section        0  stm32f10x_exti.o(i.EXTI_ClearITPendingBit)
     i.EXTI_GetITStatus                       0x08000354   Section        0  stm32f10x_exti.o(i.EXTI_GetITStatus)
     i.EXTI_Init                              0x0800037c   Section        0  stm32f10x_exti.o(i.EXTI_Init)
@@ -1080,12 +1080,12 @@ Image Symbol Table
     __use_no_semihosting_swi                 0x08000241   Thumb Code     2  use_no_semi.o(.text)
     BusFault_Handler                         0x08000243   Thumb Code     4  stm32f10x_it.o(i.BusFault_Handler)
     __semihosting_library_function           0x08000243   Thumb Code     0  indicate_semi.o(.text)
-    CenterSensor_init                        0x08000249   Thumb Code   128  centersensor.o(i.CenterSensor_init)
-    ConterSen                                0x080002cd   Thumb Code     6  centersensor.o(i.ConterSen)
-    DebugMon_Handler                         0x080002d9   Thumb Code     2  stm32f10x_it.o(i.DebugMon_Handler)
-    Delay_ms                                 0x080002db   Thumb Code    24  delay.o(i.Delay_ms)
-    Delay_us                                 0x080002f3   Thumb Code    46  delay.o(i.Delay_us)
-    EXTI15_10_IRQHandler                     0x08000321   Thumb Code    34  centersensor.o(i.EXTI15_10_IRQHandler)
+    CenterSensor_init                        0x08000249   Thumb Code   122  centersensor.o(i.CenterSensor_init)
+    ConterSen                                0x080002c9   Thumb Code     6  centersensor.o(i.ConterSen)
+    DebugMon_Handler                         0x080002d5   Thumb Code     2  stm32f10x_it.o(i.DebugMon_Handler)
+    Delay_ms                                 0x080002d7   Thumb Code    24  delay.o(i.Delay_ms)
+    Delay_us                                 0x080002ef   Thumb Code    46  delay.o(i.Delay_us)
+    EXTI15_10_IRQHandler                     0x0800031d   Thumb Code    40  centersensor.o(i.EXTI15_10_IRQHandler)
     EXTI_ClearITPendingBit                   0x08000349   Thumb Code     6  stm32f10x_exti.o(i.EXTI_ClearITPendingBit)
     EXTI_GetITStatus                         0x08000355   Thumb Code    34  stm32f10x_exti.o(i.EXTI_GetITStatus)
     EXTI_Init                                0x0800037d   Thumb Code   142  stm32f10x_exti.o(i.EXTI_Init)
@@ -1198,12 +1198,12 @@ Memory Map of the image
     0x08000242   0x08000242   0x00000000   Code   RO         3614    .text               c_w.l(indicate_semi.o)
     0x08000242   0x08000242   0x00000004   Code   RO          181    i.BusFault_Handler  stm32f10x_it.o
     0x08000246   0x08000246   0x00000002   PAD
-    0x08000248   0x08000248   0x00000084   Code   RO         3481    i.CenterSensor_init  centersensor.o
-    0x080002cc   0x080002cc   0x0000000c   Code   RO         3482    i.ConterSen         centersensor.o
-    0x080002d8   0x080002d8   0x00000002   Code   RO          182    i.DebugMon_Handler  stm32f10x_it.o
-    0x080002da   0x080002da   0x00000018   Code   RO         3280    i.Delay_ms          delay.o
-    0x080002f2   0x080002f2   0x0000002e   Code   RO         3282    i.Delay_us          delay.o
-    0x08000320   0x08000320   0x00000028   Code   RO         3483    i.EXTI15_10_IRQHandler  centersensor.o
+    0x08000248   0x08000248   0x00000080   Code   RO         3481    i.CenterSensor_init  centersensor.o
+    0x080002c8   0x080002c8   0x0000000c   Code   RO         3482    i.ConterSen         centersensor.o
+    0x080002d4   0x080002d4   0x00000002   Code   RO          182    i.DebugMon_Handler  stm32f10x_it.o
+    0x080002d6   0x080002d6   0x00000018   Code   RO         3280    i.Delay_ms          delay.o
+    0x080002ee   0x080002ee   0x0000002e   Code   RO         3282    i.Delay_us          delay.o
+    0x0800031c   0x0800031c   0x0000002c   Code   RO         3483    i.EXTI15_10_IRQHandler  centersensor.o
     0x08000348   0x08000348   0x0000000c   Code   RO         1069    i.EXTI_ClearITPendingBit  stm32f10x_exti.o
     0x08000354   0x08000354   0x00000028   Code   RO         1073    i.EXTI_GetITStatus  stm32f10x_exti.o
     0x0800037c   0x0800037c   0x00000094   Code   RO         1074    i.EXTI_Init         stm32f10x_exti.o

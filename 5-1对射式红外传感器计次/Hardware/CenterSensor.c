@@ -37,6 +37,7 @@ uint16_t ConterSen(void){
 void EXTI15_10_IRQHandler(void){
   if (EXTI_GetITStatus(EXTI_Line14) ==SET )
   {
+    Delay_ms(200);
     Conter_Count++;
     EXTI_ClearITPendingBit(EXTI_Line14);
   }
