@@ -30,3 +30,4 @@
 .\objects\main.o: .\Libary\misc.h
 .\objects\main.o: .\Hardware\OLED.h
 .\objects\main.o: .\System\Delay.h
+.\objects\main.o: .\Hardware\Encoder.h
