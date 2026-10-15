@@ -1,0 +1,14 @@
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\K51\ARM\ARMCC\Bin'
+Build target 'Target_1'
+Note: source file '.\Start\startup_stm32f10x_md.s' - object file renamed from '.\Objects\startup_stm32f10x_md.o' to '.\Objects\startup_stm32f10x_md_1.o'.Note: source file '.\Start\core_cm3.c' - object file renamed from '.\Objects\core_cm3.o' to '.\Objects\core_cm3_1.o'.Note: source file '.\Start\system_stm32f10x.c' - object file renamed from '.\Objects\system_stm32f10x.o' to '.\Objects\system_stm32f10x_1.o'.linking...
+.\Objects\jialin.axf: Error: L6200E: Symbol EXTI15_10_IRQHandler multiply defined (by exit.o and main.o).
+.\Objects\jialin.axf: Error: L6200E: Symbol EXTI1_IRQHandler multiply defined (by exit.o and main.o).
+.\Objects\jialin.axf: Error: L6200E: Symbol EXTI_Init_All multiply defined (by exit.o and main.o).
+.\Objects\jialin.axf: Error: L6200E: Symbol GPIO_Init_All multiply defined (by gpio.o and main.o).
+.\Objects\jialin.axf: Error: L6200E: Symbol NVIC_Init_All multiply defined (by nvic.o and main.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 5 error messages.
+".\Objects\jialin.axf" - 5 Error(s), 0 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:00
